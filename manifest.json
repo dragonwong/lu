@@ -1,0 +1,24 @@
+{
+	"manifest_version": 2,
+	"name": "hello, lu",
+	"version": "1.0",
+	"description": "该插件用于查看lu",
+	//"background_page": "background.html",        //这个html页面用来保存插件的主要逻辑
+	/*"permissions": [                             //权限设置，用来定义所需的网络信息，实现跨越
+		"tabs", "http:/*","notifications"
+	],*/
+	/*"background": {
+		"scripts": ["background.js"]
+	},*/
+	"permissions": [                             //权限设置，用来定义所需的网络信息，实现跨越
+		"http://weibo.com/",
+		"http://*.weibo.com/*"
+	],
+	"browser_action": {                          //浏览器行为
+		"default_icon": {
+			"19": "icon.png",                //在浏览器上的小图标
+			"38": "icon38.png"
+		},
+		"default_popup": "popup.html"        //点击上面的小图标后弹出的那个小窗口页面
+	}
+}
